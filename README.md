@@ -44,7 +44,7 @@ Puis veuillez exécuter la commande suivante pour lancer le docker-compose.
 
 ```[sudo] docker-compose up -d```
 
-## Accéder au wordpress
+## Accéder au >ordpress
 
 ### Visiter le Wordpress
 
@@ -64,7 +64,7 @@ http://localhost:8000/wp-admin/
 
 ## Accéder au serveur MySQL
 
-### Visiter phpMyAdmin
+### Se connecter à phpMyAdmin
 
 Veuillez vous rendre à l'adresse *localhost:8080* sur votre navigateur internet préféré pour accéder et visiter phpMyAdmin.  
 Les identifiants sont :
