@@ -44,7 +44,7 @@ Puis veuillez exécuter la commande suivante pour lancer le docker-compose.
 
 ```[sudo] docker-compose up -d```
 
-## Accéder au >ordpress
+## Accéder au Wordpress
 
 ### Visiter le Wordpress
 
