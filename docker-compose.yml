@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  db:
+    #image de la base de donnée mysql contenant les pages créées à l'occasion du projet NF19
+    image: daidbou/custom_mysql:1.0.0
+    volumes:
+      - ./db:/var/lib/mysql
+    restart: always
+    env_file:
+      - wordpress.env
+    networks:
+      - wpsite
+    container_name: db
+  
+  webserver:
+    depends_on:
+      - db
+    #image du site wordpress custom
+    image: daidbou/custom_wordpress:1.1.0
+    ports:
+      - '8000:80'
+    restart: always
+    volumes: 
+      - './html:/var/www/html'
+    env_file:
+      - wordpress.env
+    networks:
+      - wpsite
+  #dashboard de mysql pour gérer la base de donnée à travers une page web
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: db
+    env_file:
+      - wordpress.env
+    networks:
+      - wpsite
+networks:
+  wpsite:
+volumes:
+  html:
+  db:
