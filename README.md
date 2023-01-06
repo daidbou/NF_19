@@ -64,7 +64,7 @@ http://localhost:8000/wp-admin/
 
 ## Accéder au serveur MySQL
 
-###Visiter phpMyAdmin
+### Visiter phpMyAdmin
 
 Veuillez vous rendre à l'adresse *localhost:8080* sur votre navigateur internet préféré pour accéder et visiter phpMyAdmin.  
 Les identifiants sont :
